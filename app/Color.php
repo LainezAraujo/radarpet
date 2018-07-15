@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Color extends Model
 {
-    public $timestamps = false;
+    public $timestamps = true;
+    protected $table = 'colors';
 }
