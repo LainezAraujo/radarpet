@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfilephotoController extends Controller
+class ProfilePhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
