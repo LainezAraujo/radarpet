@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Action extends Model
 {
     //
+
+    protected $table 'actions';
 }
