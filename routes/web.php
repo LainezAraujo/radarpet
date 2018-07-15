@@ -51,14 +51,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/situation/{id}', 'SituationController@show'); //Mostar Contato
 
     //Rotas de **Profile_Photos**
-    Route::get('/listprofilephoto', 'ProfilephotoController@index'); //Listar Contatos
-    Route::get('/profilephotos', 'ProfilephotoController@index'); //Listar Contatos
-    Route::get('/profilephoto', 'ProfilephotoController@create'); //Formulario Adicionar
-    Route::get('/profilephoto/edit/{id}', 'ProfilephotoController@edit'); //Formulario Editar
-    Route::match(array('GET', 'POST', 'PUT'), '/profilephoto/store', 'ProfilephotoController@store'); //Adicionar Contato
-    Route::match(array('GET', 'POST', 'PUT'), '/profilephoto/update/{id}', 'ProfilephotoController@update'); //Editar Contato
-    Route::get('/profilephoto/delete/{id}', 'ProfilephotoController@destroy'); //Deletar Contato
-    Route::get('/profilephoto/{id}', 'ProfilephotoController@show'); //Mostar Contato
+    Route::get('/listprofilephoto', 'ProfilePhotoController@index'); //Listar Contatos
+    Route::get('/profilephotos', 'ProfilePhotoController@index'); //Listar Contatos
+    Route::get('/profilephoto', 'ProfilePhotoController@create'); //Formulario Adicionar
+    Route::get('/profilephoto/edit/{id}', 'ProfilePhotoController@edit'); //Formulario Editar
+    Route::match(array('GET', 'POST', 'PUT'), '/profilephoto/store', 'ProfilePhotoController@store'); //Adicionar Contato
+    Route::match(array('GET', 'POST', 'PUT'), '/profilephoto/update/{id}', 'ProfilePhotoController@update'); //Editar Contato
+    Route::get('/profilephoto/delete/{id}', 'ProfilePhotoController@destroy'); //Deletar Contato
+    Route::get('/profilephoto/{id}', 'ProfilePhotoController@show'); //Mostar Contato
 
     //Rotas de **Animals**
     Route::get('/listanimal', 'AnimalController@index'); //Listar Contatos
