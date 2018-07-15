@@ -20,14 +20,14 @@ class CreateAnimalsTable extends Migration
             $table->enum('age', ['filhote', 'jovem', 'adulto']);
             $table->enum('gender', ['M','F']);
             $table->string('primary_color');
-            $table->string('secundary_color');
+            $table->string('secundary_color')->nullable();
             $table->integer('coat_id')->unsigned();
             $table->foreign('coat_id')->references('id')->on('coats');
             $table->integer('color_id')->unsigned();
             $table->foreign('color_id')->references('id')->on('colors');
-            $table->integer('image_id')->unsigned();
+            $table->integer('image_id')->unsigned()->nullable();
             $table->foreign('image_id')->references('id')->on('images');
-            $table->integer('profile_photo_id')->unsigned();
+            $table->integer('profile_photo_id')->unsigned()->nullable();
             $table->foreign('profile_photo_id')->references('id')->on('profile_photos');
             $table->integer('situation_id')->unsigned();
             $table->foreign('situation_id')->references('id')->on('situations');

@@ -14,16 +14,16 @@ class AlterTableUsers extends Migration
     public function up()
     {
          Schema::table('users', function (Blueprint $table) {
-            $table-> string('last_name');
-            $table->string('cpf');
-            $table->date('birth');
-            $table->string('primary_phone');
-            $table->string('secondary_phone');
-            $table->boolean('ong');
-            $table->enum('gender', ['M', 'F']);    
-            $table->unsignedInteger('profile_photo_id');   
-            $table->foreign('profile_photo_id')->references('id')->on('profile_photos'); 
-            $table->unsignedInteger('situation_id');   
+            $table-> string('last_name')->nullable();
+            $table->string('cpf')->nullable();
+            $table->date('birth')->nullable();
+            $table->string('primary_phone')->nullable();
+            $table->string('secondary_phone')->nullable();
+            $table->boolean('ong')->nullable();
+            $table->enum('gender', ['M', 'F'])->nullable();
+            $table->unsignedInteger('profile_photo_id')->nullable();
+            $table->foreign('profile_photo_id')->references('id')->on('profile_photos');
+            $table->unsignedInteger('situation_id')->nullable();
             $table->foreign('situation_id')->references('id')->on('situations'); 
         });
     }
