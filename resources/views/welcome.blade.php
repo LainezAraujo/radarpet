@@ -19,37 +19,25 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/radarpet.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/color.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 </head>
 <body>
 
-@guest
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-    </li>
-@else
-    <li class="nav-item dropdown">
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }} <span class="caret"></span>
-        </a>
+<!--Links -->
 
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        </div>
-    </li>
-@endguest
+<nav class="background-cinza">
+    <div class="nav-wrapper">
+
+        <a href="#" class="brand-logo"><img src="{{ asset('image/logo.png') }}"></img></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+        </ul>
+
+    </div>
+</nav>
 
 </body>
 </html>
