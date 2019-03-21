@@ -19,8 +19,8 @@
             <li><a href="index.html#topo">Home</a></li>
             <li><a href="index.html#como-funciona">Como Funciona</a></li>
             <li><a href="/index.html#sobre">Sobre</a></li>
-            <li><a href="/galeria.html">Galeria de Adoção</a></li>
-            <li><a href="/login.html">Login</a></li>
+            <li><a href="{{route('galeria')}}">Galeria de Adoção</a></li>
+            <li><a href="{{route('login')}}">Login</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
@@ -28,7 +28,7 @@
             <li><a href="#como-funciona">Como Funciona</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="/galeria.html">Galeria de Adoção</a></li>
-            <li><a href="/login.html">Login</a></li>
+            <li><a href="{{route('login')}}">Login</a></li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>

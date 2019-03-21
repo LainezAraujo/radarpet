@@ -69,4 +69,20 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function register()
+    {
+        $data = $_POST;
+        
+        return User::create([
+            //nome do banco => nome formulário
+            'first_name' => $data['first_name'],
+            'last_name'=>$data['last_name'],
+            'cpf'=>$data['cpf'],
+            'primary_phone'=>$data['primary_phone'],
+            'secondary_phone'=>$data['secondary_phone'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+    }
 }
